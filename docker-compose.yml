@@ -45,7 +45,7 @@ services:
     image: ghcr.io/euro-office/documentserver:latest
     environment:
       EXAMPLE_ENABLED: "true"
-      JWT_SECRET: "secret"
+      JWT_SECRET: "${JWT_SECRET:?JWT_SECRET is required}"
     container_name: eo-documentserver
     ports:
       - "8080:80"
