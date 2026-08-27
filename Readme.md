@@ -107,9 +107,9 @@ http://localhost:8080/example/editor?fileExt=docx&userid=uid-1&lang=en&directUrl
 docker compose down
 ```
 
-> **Security note:** The compose file sets `JWT_SECRET=secret`. This is
-> intentionally insecure and is only suitable for local development and
-> testing. Never expose this setup to a public network.
+> **Security note:** The compose file sets a default `JWT_SECRET` for local development only.
+> Never expose this setup to a public network and always replace the secret with a strong,
+> unique value in any non-development environment.
 
 
 ## API methods for test examples
